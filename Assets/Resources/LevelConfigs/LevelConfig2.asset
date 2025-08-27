@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da180aa884654a0c9b445b5082f2c2f, type: 3}
+  m_Name: LevelConfig2
+  m_EditorClassIdentifier: 
+  levelName: Performance Mode
+  description: Performance Mode
+  songDescriptor: {fileID: 11400000, guid: 128bc13954f6b44e894e7da91d9f9ab9, type: 2}
+  chartAsset: {fileID: 4900000, guid: 513015369be6f41a6b8e9ec43e78deb5, type: 3}
+  initialBPM: 120
+  songStartDelay: 2
+  enableClickTrack: 0
+  judgeServiceType: 0
+  scoringServiceType: 0
+  conductorType: 0
+  noteTimelineType: 0
+  noteSpawnerType: 0
+  staffDrawerType: 0
+  inputReaderType: 0
+  enableVocalGate: 1
+  enableDifficultyScaling: 0
+  vocalMissGate: 3
+  vocalHitGate: 3
+  vocalFadeMs: 500
+  difficultyUpGate: 4
+  difficultyDownGate: 3
+  difficultyBpmStep: 10
+  difficultyCooldown: 2
