@@ -135,6 +135,8 @@ namespace Doulingo.UI
 
         public void OnButtonDown(int keyIndex)
         {
+            if (keyIndex >= pianoKeyButtons.Length)
+                return;
             Debug.Log($"[PianoKeyDisplay] Key {keyIndex} down");
             pianoKeyButtons[keyIndex].Press();
             OnKeyDown?.Invoke(keyIndex);
@@ -142,6 +144,8 @@ namespace Doulingo.UI
 
         public void OnButtonUp(int keyIndex)
         {
+            if (keyIndex >= pianoKeyButtons.Length)
+                return;
             Debug.Log($"[PianoKeyDisplay] Key {keyIndex} up");
             pianoKeyButtons[keyIndex].Release();
             OnKeyUp?.Invoke(keyIndex);

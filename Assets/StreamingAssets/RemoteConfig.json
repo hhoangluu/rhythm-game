@@ -1,4 +1,6 @@
 {
   "initialBPM": 120.0,
-  "hitWindow": 0.2
+  "hitWindow": 0.2,
+  "minBPM": 40.0,
+  "maxBPM": 200.0
 }
