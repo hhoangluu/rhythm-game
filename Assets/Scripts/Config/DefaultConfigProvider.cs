@@ -13,13 +13,7 @@ namespace Doulingo.Config
             return new GameConfig
             {
                 initialBPM = 100f,
-                hitWindow = 0.15f,
-                minBPM = 80f,
-                maxBPM = 180f,
-                cooldown = 0.8f,
-                streakForIncrease = 3,
-                missesForDecrease = 2,
-                bpmChangeAmount = 8f
+                hitWindow = 0.15f
             };
         }
     }

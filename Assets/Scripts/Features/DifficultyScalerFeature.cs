@@ -26,14 +26,14 @@ namespace Doulingo.Features
         public void Initialize(in GameContext ctx)
         {
             context = ctx;
-            
+
             // Try to get configuration from GameModeConfig if available
             if (ctx.GameConfig != null)
             {
                 // These would come from GameModeConfig in a real implementation
                 // For now, we'll use the default values
             }
-            
+
             Debug.Log($"[DifficultyScalerFeature] Initialized with upGate={upGate}, downGate={downGate}, bpmStep={bpmStep}, cooldown={cooldownDuration}s");
         }
 
@@ -84,17 +84,17 @@ namespace Doulingo.Features
             {
                 float currentBPM = context.Conductor.CurrentBPM;
                 float newBPM = currentBPM + bpmStep;
-                
+
                 // Check if new BPM is within bounds
                 if (newBPM <= context.GameConfig.maxBPM)
                 {
                     context.Conductor.ChangeBPM(newBPM);
                     OnDifficultyChanged?.Invoke(newBPM);
                     StartCooldown();
-                    
+
                     // CRITICAL FIX: Reset hit streak after BPM change
                     ResetHitStreak();
-                    
+
                     Debug.Log($"[DifficultyScalerFeature] Hit streak {streak} >= {upGate} - BPM increased from {currentBPM} to {newBPM}, streak reset");
                 }
                 else
@@ -113,17 +113,17 @@ namespace Doulingo.Features
             {
                 float currentBPM = context.Conductor.CurrentBPM;
                 float newBPM = currentBPM - bpmStep;
-                
+
                 // Check if new BPM is within bounds
                 if (newBPM >= context.GameConfig.minBPM)
                 {
                     context.Conductor.ChangeBPM(newBPM);
                     OnDifficultyChanged?.Invoke(newBPM);
                     StartCooldown();
-                    
+
                     // CRITICAL FIX: Reset miss streak after BPM change
                     ResetMissStreak();
-                    
+
                     Debug.Log($"[DifficultyScalerFeature] Miss streak {streak} >= {downGate} - BPM decreased from {currentBPM} to {newBPM}, streak reset");
                 }
                 else
@@ -132,7 +132,7 @@ namespace Doulingo.Features
                 }
             }
         }
-        
+
         // Add these new methods to reset streaks
         private void ResetHitStreak()
         {
@@ -143,7 +143,7 @@ namespace Doulingo.Features
                 Debug.Log("[DifficultyScalerFeature] Hit streak reset after BPM increase");
             }
         }
-        
+
         private void ResetMissStreak()
         {
             // Reset miss streak through scoring service
