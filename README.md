@@ -110,6 +110,38 @@ The project follows a clean architecture pattern with clear separation of concer
 - **Modular Features**: Pluggable feature system for easy gameplay customization
 - **Service Separation**: Clear distinction between global and gameplay services
 
+## Design Patterns
+
+### **Service Locator Pattern**
+- **ServiceHub**: Central registry for accessing all game services
+- **Benefits**: Easy service discovery, centralized dependency management
+- **Usage**: `ServiceHub.AudioService`, `ServiceHub.Conductor`
+
+### **Factory Pattern**
+- **Service Creation**: ServiceHub creates services based on configuration
+- **Benefits**: Flexible service instantiation, configuration-driven setup
+- **Usage**: Different service types can be swapped via LevelConfig
+
+### **Observer Pattern (Event-Driven)**
+- **C# Events**: Services communicate through events (`Action<T>`)
+- **Benefits**: Loose coupling, easy to add/remove listeners
+- **Examples**: `OnNoteJudged`, `OnBPMChanged`, `OnComboChanged`
+
+### **Strategy Pattern**
+- **Feature System**: Pluggable gameplay mechanics via `IGameFeature`
+- **Benefits**: Easy to add/remove features, runtime configuration
+- **Examples**: `VocalGateFeature`, `DifficultyScalerFeature`
+
+### **Singleton Pattern**
+- **GameManager**: Single instance accessible globally
+- **Benefits**: Easy access to game control, centralized game state
+- **Usage**: `GameManager.Instance.StartGame()`
+
+### **Object Pool Pattern**
+- **Note/Object Pooling**: Reuses objects instead of creating/destroying
+- **Benefits**: Better performance, memory efficiency
+- **Usage**: `ObjectPool<T>.Get()`, `ObjectPool<T>.Return()`
+
 ## Configuration
 
 ### Game Settings (`Assets/StreamingAssets/RemoteConfig.json`)
