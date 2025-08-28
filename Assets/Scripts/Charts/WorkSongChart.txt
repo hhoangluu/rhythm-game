@@ -1,0 +1,38 @@
+# Test Chart for Doulingo Music Piano Game
+# Format: beat,type,duration,pianoKeyIndex
+# Beat: timing in beats
+# Type: Tap, Hold, or Slide
+# Duration: how long to hold (for Hold notes)
+# pianoKeyIndex: which piano key (0-7) this note corresponds to
+# Note: Lane positions are calculated automatically based on piano key index
+# 
+# First 4 beats are empty for a beautiful intro
+# Then uses only C(0), D(1), E(2) notes in a musical pattern
+
+# Segment 1 (1 note)
+0,Hold,1.0,1
+
+# Segment 2 (2 notes)
+8.5,Hold,1.0,1
+10.5,Hold,1.0,1
+12.5,Hold,1.0,1
+14.5,Hold,1.0,0
+16.5,Hold,1.0,1
+17.5,Hold,1.0,1
+19.5,Hold,1.0,1
+20.5,Hold,1.0,0
+
+24.5,Hold,1.0,1
+25.5,Hold,1.0,1
+27.5,Hold,1.0,1
+28.5,Hold,1.0,0
+
+32.5,Hold,1.0,1
+33.5,Hold,1.0,1
+
+40.5,Hold,1.0,1
+42.5,Hold,1.0,1
+44.5,Hold,1.0,1
+46.5,Hold,1.0,0
+48.5,Hold,1.0,1
+50.5,Hold,1.0,1

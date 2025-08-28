@@ -97,7 +97,6 @@ namespace Doulingo.Gameplay
 
             // Position and activate the pooled note
             noteComp.gameObject.transform.position = spawnPos;
-            noteComp.gameObject.SetActive(true);
 
             // Initialize the note with data
             noteComp.Initialize(note);
@@ -106,6 +105,7 @@ namespace Doulingo.Gameplay
             Color noteColor = GetNoteColor(note.pianoKeyIndex);
             noteComp.SetColor(noteColor);
             activeNoteObjects.Add(noteComp);
+            noteComp.gameObject.SetActive(true);
             spawnedNotes.Add(note);
 
             Debug.Log($"[NoteSpawner] Spawned note at beat {note.beat}, lane {note.pianoKeyIndex}, pos2D=({spawnPos.x:F1}, {spawnPos.y:F1})");

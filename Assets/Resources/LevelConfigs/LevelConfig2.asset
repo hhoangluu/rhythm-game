@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: Performance Mode
   description: Performance Mode
   songDescriptor: {fileID: 11400000, guid: 128bc13954f6b44e894e7da91d9f9ab9, type: 2}
-  chartAsset: {fileID: 4900000, guid: 513015369be6f41a6b8e9ec43e78deb5, type: 3}
+  chartAsset: {fileID: 4900000, guid: a320115272eb94681a223ad6fe3f4d49, type: 3}
   initialBPM: 120
   songStartDelay: 2
   enableClickTrack: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   conductorType: 0
   noteTimelineType: 0
   noteSpawnerType: 0
-  staffDrawerType: 0
+  staffDrawerType: 1
   inputReaderType: 0
   enableVocalGate: 1
   enableDifficultyScaling: 0

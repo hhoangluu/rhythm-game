@@ -51,6 +51,7 @@ namespace Doulingo.UI
             if (result != HitResult.Miss)
             {
                 pianoKeyEffectController.ShowEffect(pianoKeyButtons[note.pianoKeyIndex], GetKeyColor(note.pianoKeyIndex));
+                pianoKeyButtons[note.pianoKeyIndex].Hit();
             }
         }
 
@@ -68,12 +69,13 @@ namespace Doulingo.UI
             {
                 if (pianoKeyButtons[i] != null)
                 {
+                    pianoKeyButtons[i].SetColor(GetKeyColor(i));
                     // Set button color
-                    var buttonImage = pianoKeyButtons[i].GetComponent<Image>();
-                    if (buttonImage != null)
-                    {
-                        buttonImage.color = GetKeyColor(i);
-                    }
+                    // var buttonImage = pianoKeyButtons[i].GetComponent<Image>();
+                    // if (buttonImage != null)
+                    // {
+                    //     buttonImage.color = GetKeyColor(i);
+                    // }
 
                     // Set up EventTrigger for proper down/up detection
                     SetupButtonEvents(pianoKeyButtons[i], i);

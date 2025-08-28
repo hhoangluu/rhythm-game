@@ -379,7 +379,7 @@ namespace Doulingo.Gameplay
             OnNoteJudged?.Invoke(note, judgment);
 
             eventLogger.LogNoteHit(note, judgment, accuracy);
-            Debug.Log($"Note hit! Beat: {note.beat}, Key: {note.pianoKeyIndex}, Judgment: {judgment}");
+            // Debug.Log($"Note hit! Beat: {note.beat}, Key: {note.pianoKeyIndex}, Judgment: {judgment}");
         }
 
         private void HandleMissedNote(NoteData note)
@@ -401,7 +401,7 @@ namespace Doulingo.Gameplay
         private void HandleBPMChanged(float newBPM)
         {
             Debug.Log($"BPM changed to: {newBPM}");
-            eventLogger.LogBPMChange(newBPM);
+            //eventLogger.LogBPMChange(newBPM);
         }
 
         private void HandleSongEnd()

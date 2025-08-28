@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 namespace Doulingo.UI
 {
@@ -19,12 +20,22 @@ namespace Doulingo.UI
 
         // References
         [SerializeField] RectTransform pressRectTransform;
+        [SerializeField] Image image1;
+        [SerializeField] Image image2;
+
         private Vector3 originalPosition;
         private Tween currentAnimation;
+        private Color keyColor;
 
         private void Awake()
         {
             originalPosition = pressRectTransform.localPosition;
+        }
+
+        public void Hit()
+        {
+            image1.color = keyColor;
+            image2.color = Color.white;
         }
 
         /// <summary>
@@ -54,7 +65,8 @@ namespace Doulingo.UI
         public void Release()
         {
             if (pressRectTransform == null) return;
-
+            image1.color = Color.white;
+            image2.color = keyColor;
             // Kill any existing animation
             if (currentAnimation != null && currentAnimation.IsActive())
             {
@@ -95,6 +107,13 @@ namespace Doulingo.UI
             {
                 currentAnimation.Kill();
             }
+        }
+
+        internal void SetColor(Color color)
+        {
+            this.keyColor = color;
+            image1.color = Color.white;
+            image2.color = keyColor;
         }
     }
 }

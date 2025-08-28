@@ -69,7 +69,7 @@ public class UnityAudioService : MonoBehaviour, IAudioService
         secondsPerBeat = 60.0 / song.bpmBase;
         nextClickDsp = dspStart + song.leadInSec;
         
-        Debug.Log($"[UnityAudioService] Scheduled song to play at DSP time: {dspStart:F3}");
+        Debug.Log($"[UnityAudioService] Scheduled song to play at DSP time: {dspStart:F3} secondsPerBeat {secondsPerBeat}");
     }
 
     // === IMusicTransport SetPitch ===

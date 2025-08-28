@@ -32,6 +32,7 @@ namespace Doulingo.Gameplay
             glowObject.transform.parent.localScale = new Vector3(1, glowObject.transform.parent.localScale.y);
             GameManager.OnKeyUp -= OnKeyUp;
             GameManager.OnKeyUp += OnKeyUp;
+            ServiceHub.Conductor.OnBPMChanged -= OnBPMChanged;
             ServiceHub.Conductor.OnBPMChanged += OnBPMChanged;
         }
 
@@ -57,6 +58,7 @@ namespace Doulingo.Gameplay
             glowObject.color = color;
             // Make the spriteRenderer color a bit darker by multiplying RGB by 0.7f
             spriteRenderer.color = new Color(color.r * 0.7f, color.g * 0.7f, color.b * 0.7f, 155f / 255f);
+
         }
 
         public void Hit()

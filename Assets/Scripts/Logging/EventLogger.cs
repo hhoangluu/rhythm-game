@@ -5,6 +5,61 @@ using System.IO;
 
 namespace Doulingo.Logging
 {
+    [System.Serializable]
+    public class NoteHitLogData
+    {
+        public string event_type;
+        public string timestamp;
+        public float note_beat;
+        public string note_type;
+        public string hit_result;
+        public float accuracy;
+        public int piano_key_index;
+        public string piano_key_name;
+        public int lane_number;
+    }
+
+    [System.Serializable]
+    public class NoteMissLogData
+    {
+        public string event_type;
+        public string timestamp;
+        public float note_beat;
+        public string note_type;
+        public int piano_key_index;
+        public string piano_key_name;
+        public int lane_number;
+    }
+
+    [System.Serializable]
+    public class SongEndLogData
+    {
+        public string event_type;
+        public string timestamp;
+        public int final_score;
+        public int total_hits;
+        public int total_misses;
+        public float accuracy_percentage;
+    }
+
+    [System.Serializable]
+    public class DifficultyChangeLogData
+    {
+        public string event_type;
+        public string timestamp;
+        public float old_bpm;
+        public float new_bpm;
+        public float bpm_delta;
+    }
+
+    [System.Serializable]
+    public class GameStartLogData
+    {
+        public string event_type;
+        public string timestamp;
+        public float initial_bpm;
+    }
+
     public class EventLogger : MonoBehaviour, IEventLogger
     {
         [Header("Logging Settings")]
@@ -23,7 +78,7 @@ namespace Doulingo.Logging
         {
             if (!enableLogging) return;
             
-            var logData = new
+            var logData = new NoteHitLogData
             {
                 event_type = "note_hit",
                 timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
@@ -49,7 +104,7 @@ namespace Doulingo.Logging
         {
             if (!enableLogging) return;
             
-            var logData = new
+            var logData = new NoteMissLogData
             {
                 event_type = "note_miss",
                 timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
@@ -73,7 +128,7 @@ namespace Doulingo.Logging
         {
             if (!enableLogging) return;
             
-            var logData = new
+            var logData = new SongEndLogData
             {
                 event_type = "song_end",
                 timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
@@ -97,13 +152,13 @@ namespace Doulingo.Logging
         {
             if (!enableLogging) return;
             
-            var logData = new
+            var logData = new DifficultyChangeLogData
             {
                 event_type = "difficulty_change",
                 timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
                 old_bpm = Mathf.Round(oldBPM * 100f) / 100f,
                 new_bpm = Mathf.Round(newBPM * 100f) / 100f,
-                bpm_difference = Mathf.Round((newBPM - oldBPM) * 100f) / 100f
+                bpm_delta = Mathf.Round((newBPM - oldBPM) * 100f) / 100f
             };
             
             string json = JsonUtility.ToJson(logData, true);
@@ -139,7 +194,7 @@ namespace Doulingo.Logging
         {
             if (!enableLogging) return;
             
-            var logData = new
+            var logData = new GameStartLogData
             {
                 event_type = "game_start",
                 timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),

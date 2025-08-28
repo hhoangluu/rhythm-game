@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: SongDescriptor2
   m_EditorClassIdentifier: 
   songId: demo
-  displayName: Demo Song
-  artist: 
-  bpmBase: 100
+  displayName: Work Song
+  artist: Hozier
+  bpmBase: 120
   leadInSec: 0.05
   fullMix: {fileID: 0}
-  stems: []
+  stems:
+  - id: vocal
+    clip: {fileID: 8300000, guid: 3b4ae2615788d456a9dd9b57d3fb4d8e, type: 3}
+  - id: other
+    clip: {fileID: 8300000, guid: d5585f928711e42ec9f13257caeb7c2d, type: 3}
   clickClip: {fileID: 0}
   tags: []

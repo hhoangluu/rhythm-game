@@ -146,6 +146,8 @@ MonoBehaviour:
   pressEase: 6
   releaseEase: 27
   pressRectTransform: {fileID: 4799494871949144548}
+  image1: {fileID: 8909588116976709870}
+  image2: {fileID: 541420011525833669}
 --- !u!1 &294002905935349908
 GameObject:
   m_ObjectHideFlags: 0
@@ -5274,7 +5276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6325295673005090757
@@ -5490,7 +5492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &73232597474795810
@@ -5766,6 +5768,8 @@ MonoBehaviour:
   pressEase: 6
   releaseEase: 27
   pressRectTransform: {fileID: 7129750900490636374}
+  image1: {fileID: 4754460792864980531}
+  image2: {fileID: 6273911379935801131}
 --- !u!1 &3769074525231756058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5800,7 +5804,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &478607382749431885
@@ -5994,6 +5998,8 @@ MonoBehaviour:
   pressEase: 6
   releaseEase: 27
   pressRectTransform: {fileID: 2463508146762587752}
+  image1: {fileID: 1758018955273273942}
+  image2: {fileID: 6134581222806318424}
 --- !u!1 &4422908556784851077
 GameObject:
   m_ObjectHideFlags: 0
@@ -6088,6 +6094,8 @@ MonoBehaviour:
   pressEase: 6
   releaseEase: 27
   pressRectTransform: {fileID: 581520903756594160}
+  image1: {fileID: 6980357792191262269}
+  image2: {fileID: 2277586954065257813}
 --- !u!1 &4678127207297571466
 GameObject:
   m_ObjectHideFlags: 0
@@ -11070,6 +11078,8 @@ MonoBehaviour:
   pressEase: 6
   releaseEase: 27
   pressRectTransform: {fileID: 8425057765997071468}
+  image1: {fileID: 2274175263263085675}
+  image2: {fileID: 7004140895862314524}
 --- !u!1 &5346222621269804982
 GameObject:
   m_ObjectHideFlags: 0
@@ -11338,7 +11348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7648316350477365179
@@ -11472,7 +11482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5070471689481287912
